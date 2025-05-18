@@ -4,8 +4,13 @@
 ```
 project-report/
 ├── index.html
+├── stages.html
+├── gallery.html
+├── demo.html
 ├── css/
 │   └── style.css
+├── js/
+│   └── script.js
 └── images/
 ```
 
