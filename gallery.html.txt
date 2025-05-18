@@ -1,0 +1,11 @@
+<section class="gallery">
+  <h2>Скриншоты работы</h2>
+  <div class="screenshot">
+    <img src="images/design-prototype.png" alt="Прототип в Figma">
+    <p>Макет дизайна</p>
+  </div>
+  <div class="screenshot">
+    <img src="images/code-screenshot.png" alt="Пример кода">
+    <p>Фрагмент HTML-кода</p>
+  </div>
+</section>
