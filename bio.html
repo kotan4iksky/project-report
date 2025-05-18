@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя биография - Баранов Вадим</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Основные стили */
+        .wiki-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .wiki-header {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .wiki-title {
+            font-size: 2em;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .wiki-content {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .wiki-main {
+            flex: 2;
+        }
+        
+        .wiki-sidebar {
+            flex: 1;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .wiki-section {
+            margin-bottom: 30px;
+        }
+        
+        .wiki-section h2 {
+            color: #2980b9;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        
+        .family-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .family-list li {
+            background: #f0f8ff;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        .hobby-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+        }
+        
+        .hobby-card h3 {
+            color: #3498db;
+            margin-top: 0;
+        }
+        
+        .back-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 15px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        .back-button:hover {
+            background: #2980b9;
+        }
+
+        /* Анимации */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .scroll-animate.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="wiki-container">
+        <header class="wiki-header scroll-animate">
+            <h1 class="wiki-title">Баранов Вадим</h1>
+            <p>Ученик 10 класса, веб-разработчик</p>
+            <a href="index.html" class="back-button">← На главную</a>
+        </header>
+        
+        <div class="wiki-content">
+            <main class="wiki-main">
+                <section class="wiki-section scroll-animate">
+                    <h2>Основная информация</h2>
+                    <p>Родился 18 января 2025 года в городе Пикалёво, Россия. Учусь в 10 классе, углублённо изучаю информатику и математику.</p>
+                </section>
+                
+                <section class="wiki-section scroll-animate">
+                    <h2>Семья</h2>
+                    <ul class="family-list">
+                        <li><strong>Мать:</strong> Баранова Елена Павловна</li>
+                        <li><strong>Отец:</strong> Баранов Сергей Юрьевич</li>
+                        <li><strong>Брат:</strong> Баранов Даниил Сергеевич</li>
+                    </ul>
+                </section>
+                
+                <section class="wiki-section scroll-animate">
+                    <h2>Увлечения</h2>
+                    <div class="hobby-card scroll-animate">
+                        <h3>Игра на гитаре</h3>
+                        <p>Любитель, учусь самостоятельно по видеороликам. Знаю несколько простых песен.</p>
+                    </div>
+                    
+                    <div class="hobby-card scroll-animate">
+                        <h3>Видеоигры</h3>
+                        <p>Играю в игры разных жанров без определённых предпочтений.</p>
+                    </div>
+                    
+                    <div class="hobby-card scroll-animate">
+                        <h3>Программирование</h3>
+                        <p>Начинающий веб-разработчик. Осваиваю HTML, CSS и JavaScript.</p>
+                    </div>
+                </section>
+            </main>
+            
+            <aside class="wiki-sidebar scroll-animate">
+                <img src="images/photo.jpg" alt="Фото Вадима" style="width:100%; border-radius:5px; margin-bottom:15px;">
+                <h3>Персональные данные</h3>
+                <p><strong>Дата рождения:</strong> 18.01.2025</p>
+                <p><strong>Место рождения:</strong> Пикалёво, Россия</p>
+                <p><strong>Род деятельности:</strong> Ученик</p>
+                
+                <h3>Навыки</h3>
+                <ul>
+                    <li>Веб-разработка (начальный уровень)</li>
+                    <li>Игра на гитаре</li>
+                </ul>
+            </aside>
+        </div>
+    </div>
+
+    <script>
+        // Анимация при прокрутке
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll('.scroll-animate');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            elements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

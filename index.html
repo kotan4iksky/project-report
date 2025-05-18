@@ -1,27 +1,183 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Мой проект: Создание сайта</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проект по веб-разработке | Баранов Вадим</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #3498db;
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 2.2em;
+        }
+        h2 {
+            color: #2980b9;
+            margin-top: 30px;
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+        }
+        .intro {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+        }
+        .highlight-box {
+            background-color: #e8f4fc;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .definition {
+            font-style: italic;
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        nav a {
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #2980b9;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #ddd;
+            color: #7f8c8d;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Отчёт о проекте</h1>
-    <p>Создание сайта</p>
-  </header>
-  <nav>
-    <a href="index.html">Главная</a>
-    <a href="stages.html">Этапы</a>
-    <a href="gallery.html">Галерея</a>
-    <a href="demo.html">Демо</a>
-  </nav>
-  <main>
-    <h2>О проекте</h2>
-    <p>Этот сайт создан для демонстрации этапов моей работы над проектом.</p>
-  </main>
-  <footer>
-    <p>© 2025, Баранов Вадим</p>
-  </footer>
+    <header>
+        <h1>Индивидуальный проект по веб-разработке</h1>
+        <p>Учащегося 10 класса Баранова Вадима</p>
+    </header>
+
+    <nav>
+        <a href="bio.html">Биография</a>
+        <a href="gallery.html">Галерея проекта</a>
+        <a href="stages.html">Этапы работы</a>
+    </nav>
+
+    <main>
+        <section class="intro">
+            <h2>О проекте</h2>
+            <p>Данный сайт был создан для индивидуального проекта учащегося 10 класса Баранова Вадима.</p>
+        </section>
+
+        <section>
+            <h2>Актуальность проекта</h2>
+            <div class="highlight-box">
+                <p>Актуальность выбранной темы заключается в том, что в современном мире, где цифровые технологии играют ключевую роль во всех сферах жизни, сайты стали неотъемлемой частью бизнеса, образования, культуры и повседневной деятельности. Интернет предоставляет уникальные возможности для представления информации, взаимодействия с аудиторией, продвижения товаров и услуг, а также решения множества других задач. Сайты являются основным инструментом для создания онлайн-присутствия, будь то компания, образовательное учреждение, государственная организация или личный блог.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Гипотеза</h2>
+            <p>Использование современных технологий, принципов и поисковой оптимизации при создании веб-сайта позволит разработать удобный, адаптивный и эффективный ресурс, который удовлетворит потребности пользователей и достигнет поставленных целей.</p>
+        </section>
+
+        <section>
+            <h2>Методы исследования</h2>
+            <ol>
+                <li>Анализ литературы</li>
+                <li>Прототипирование и проектирование</li>
+                <li>Разработка и программирование</li>
+                <li>Тестирование</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Что такое сайт</h2>
+            <div class="definition">
+                <p>Сайт, или веб-сайт (от англ. website: web — «паутина, сеть» и site — дословно — «место, сегмент, часть в сети»), также веб-узел, — одна или несколько логически связанных между собой веб-страниц; также место расположения контента сервера. Обычно сайт в Интернете представляет собой массив связанных данных, имеющий уникальный адрес и воспринимаемый пользователями как единое целое. Веб-сайты называются так, потому что доступ к ним происходит по протоколу HTTP.</p>
+                <p>Веб-сайт как система электронных документов (файлов данных и кода) может принадлежать частному лицу или организации и быть доступным в компьютерной сети под общим доменным именем и IP-адресом или локально на одном компьютере.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Заключение</h2>
+            <p>На сегодняшний день информационные технологии достигли такого развития, что компьютеры есть практически в каждом доме. Компьютер способен заменить любые другие средства массовой информации. Это связано с сильным распространением глобальной сети Интернет. Новые разработки позволили сделать услуги Интернет-провайдеров доступными, качественными и обеспечить высокую скорость работы для пользователей.</p>
+            <p>Каждую минуту в Интернете находятся миллионы людей и используют сеть для самых различных целей. Все эти факты породили новое ответвление информационных технологий – разработка веб-сайтов.</p>
+            <p>В проекте были проанализированы существующие способы создания сайта, рассмотрены функциональные возможности языка HTML, разработан сайт и описаны этапы его проектирования.</p>
+            <p>Таким образом, цель проекта достигнута, поставленные задачи выполнены.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Индивидуальный проект по веб-разработке. Баранов Вадим, 10 класс.</p>
+    </footer>
 </body>
+<style>
+    /* Анимации при прокрутке - добавьте в существующий CSS */
+    .scroll-animate {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease-out;
+    }
+    .scroll-animate.animated {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    section {
+        transition-delay: 0.1s;
+    }
+    .highlight-box {
+        transition-delay: 0.2s;
+    }
+</style>
+
+<script>
+    // Скрипт анимации - добавьте перед </body>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Добавляем классы к элементам, которые нужно анимировать
+        document.querySelectorAll('section, .highlight-box, .definition').forEach(el => {
+            el.classList.add('scroll-animate');
+        });
+
+        // Запускаем анимацию при прокрутке
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.scroll-animate').forEach(el => {
+            observer.observe(el);
+        });
+    });
+</script>
 </html>

@@ -1,11 +1,126 @@
-<section class="gallery">
-  <h2>Скриншоты работы</h2>
-  <div class="screenshot">
-    <img src="images/design-prototype.png" alt="Прототип в Figma">
-    <p>Макет дизайна</p>
-  </div>
-  <div class="screenshot">
-    <img src="images/code-screenshot.png" alt="Пример кода">
-    <p>Фрагмент HTML-кода</p>
-  </div>
-</section>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея проекта</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .gallery-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .gallery-title {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 2.2em;
+        }
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        .photo-card {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            background: #fff;
+        }
+        .photo-card:hover {
+            transform: translateY(-5px);
+        }
+        .photo-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #eee;
+        }
+        .photo-description {
+            padding: 15px;
+            background: #f8f9fa;
+        }
+        .photo-description h3 {
+            margin-top: 0;
+            color: #3498db;
+        }
+        .tech-tag {
+            display: inline-block;
+            background: #e0f7fa;
+            color: #00796b;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery-container">
+        <h1 class="gallery-title">Процесс разработки</h1>
+        
+        <div class="photo-grid">
+            <!-- Фото 1: Работа в VS Code -->
+            <div class="photo-card">
+                <img src="images/coding-vscode.jpg" alt="Работа в VS Code">
+                <div class="photo-description">
+                    <h3>Написание кода</h3>
+                    <p>Процесс разработки сайта в Visual Studio Code. Пишем HTML и CSS.</p>
+                    <span class="tech-tag">VS Code</span>
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                </div>
+            </div>
+            
+            <!-- Фото 2: Работа в Git Bash -->
+            <div class="photo-card">
+                <img src="images/git-terminal.jpg" alt="Работа в терминале">
+                <div class="photo-description">
+                    <h3>Работа с Git</h3>
+                    <p>Использование Git Bash для управления версиями проекта и загрузки на GitHub.</p>
+                    <span class="tech-tag">Git</span>
+                    <span class="tech-tag">Terminal</span>
+                    <span class="tech-tag">Bash</span>
+                </div>
+            </div>
+            
+            <!-- Фото 3: Работа в GitHub -->
+            <div class="photo-card">
+                <img src="images/github-work.jpg" alt="Работа с GitHub">
+                <div class="photo-description">
+                    <h3>Управление репозиторием</h3>
+                    <p>Создание и настройка репозитория на GitHub для хостинга проекта.</p>
+                    <span class="tech-tag">GitHub</span>
+                    <span class="tech-tag">Repository</span>
+                    <span class="tech-tag">Pages</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- В начало <body> (после открывающего тега) -->
+<header>
+    <a href="index.html" class="back-button">← На главную</a>
+    <!-- Остальная шапка -->
+</header>
+
+<style>
+    .back-button {
+        display: inline-block;
+        margin: 15px;
+        padding: 8px 15px;
+        background: #f0f0f0;
+        border-radius: 5px;
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        border: 1px solid #ddd;
+    }
+    .back-button:hover {
+        background: #e0e0e0;
+    }
+</style>
+</html>
