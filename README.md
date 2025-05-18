@@ -2,15 +2,12 @@
 
 ## Структура проекта  
 ```
-project-report/
+roject/
 ├── index.html
-├── stages.html
+├── bio.html
 ├── gallery.html
-├── demo.html
 ├── css/
 │   └── style.css
-├── js/
-│   └── script.js
 └── images/
 ```
 
